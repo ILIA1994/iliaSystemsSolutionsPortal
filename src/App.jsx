@@ -1,21 +1,22 @@
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Services from './components/Services'
-import Technologies from './components/Technologies'
-import WhyUs from './components/WhyUs'
-import Projects from './components/Projects'
-import Footer from './components/Footer'
+
+import NavbarComponent from "./components/Navbar";
+import Hero from "./components/Hero";
+import Services from "./components/Services";
+import Stats from "./components/Stats";
+import Process from "./components/Process";
+import CTA from "./components/CTA";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
     <>
-      <Navbar />
+      <NavbarComponent />
       <Hero />
       <Services />
-      <Technologies />
-      <WhyUs />
-      <Projects />
+      <Stats />
+      <Process />
+      <CTA />
       <Footer />
     </>
-  )
+  );
 }

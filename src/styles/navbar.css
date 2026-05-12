@@ -1,0 +1,268 @@
+/* ========================================
+   NAVBAR
+======================================== */
+
+.custom-navbar{
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:100%;
+
+  z-index:999;
+
+  padding:10px 0;
+
+  background:
+    rgba(32, 37, 48, 0.72);
+
+  backdrop-filter:blur(18px);
+
+  border-bottom:
+    1px solid rgba(255,255,255,.05);
+
+  transition:.35s;
+}
+
+/* ========================================
+   BRAND
+======================================== */
+
+.navbar-brand-custom{
+  padding:0;
+  margin:0;
+
+  display:flex;
+  align-items:center;
+}
+
+/* ========================================
+   LOGO WRAPPER
+======================================== */
+
+.logo-wrapper{
+  display:flex;
+  align-items:center;
+
+  gap:14px;
+
+  margin:0;
+  padding:0;
+
+  height:52px;
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.logo-circle{
+  width:80px;
+  height:80px;
+
+  flex-shrink:0;
+
+  background-image:url("/logo.png");
+
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+
+  /* =========================
+     HACE GRANDE EL LOGO
+     SIN HACER GRANDE EL NAVBAR
+  ========================= */
+
+  transform:scale(1.9);
+
+  transform-origin:center;
+
+  filter:
+    drop-shadow(
+      0 0 10px rgba(0,191,255,.18)
+    );
+}
+
+/* ========================================
+   TEXT
+======================================== */
+
+.logo-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  margin-left:12px;
+}
+
+.logo-wrapper h3{
+  color:white;
+
+  margin:0;
+
+  font-size:1rem;
+  font-weight:700;
+
+  line-height:1.1;
+
+  letter-spacing:.3px;
+}
+
+.logo-wrapper span{
+  color:#94a3b8;
+
+  font-size:.68rem;
+
+  margin-top:4px;
+
+  line-height:1;
+}
+
+/* ========================================
+   NAV LINKS
+======================================== */
+
+.nav-container{
+  gap:6px;
+}
+
+.nav-link{
+  color:#cbd5e1 !important;
+
+  font-size:.92rem;
+  font-weight:500;
+
+  padding:10px 14px !important;
+
+  border-radius:12px;
+
+  transition:.3s;
+}
+
+.nav-link:hover{
+  color:white !important;
+
+  background:
+    rgba(255,255,255,.05);
+}
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.nav-btn{
+  height:44px;
+
+  padding:0 22px;
+
+  margin-left:14px;
+
+  border:none;
+
+  border-radius:14px;
+
+  color:white;
+
+  font-size:.9rem;
+  font-weight:700;
+
+  background:
+    linear-gradient(
+      90deg,
+      #00bfff,
+      #00ff95
+    );
+
+  box-shadow:
+    0 10px 30px rgba(0,191,255,.18);
+
+  transition:.35s;
+}
+
+.nav-btn:hover{
+  transform:translateY(-3px);
+}
+
+/* ========================================
+   TOGGLE
+======================================== */
+
+.custom-toggle{
+  border:
+    1px solid rgba(255,255,255,.15) !important;
+
+  padding:6px 10px;
+}
+
+.custom-toggle:focus{
+  box-shadow:none !important;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:991px){
+
+  .custom-navbar{
+    padding:10px 0;
+  }
+
+  .navbar-collapse{
+    margin-top:18px;
+
+    padding:20px;
+
+    border-radius:24px;
+
+    background:
+      rgba(15,23,42,.96);
+
+    border:
+      1px solid rgba(255,255,255,.06);
+  }
+
+  .nav-container{
+    gap:10px;
+  }
+
+  .nav-link{
+    width:100%;
+  }
+
+  .nav-btn{
+    width:100%;
+
+    margin-left:0;
+    margin-top:10px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .logo-circle{
+
+    width:36px;
+    height:36px;
+
+    transform:scale(1.6);
+  }
+
+  .logo-wrapper{
+    gap:10px;
+  }
+
+  .logo-text{
+    margin-left:6px;
+  }
+
+  .logo-wrapper h3{
+    font-size:.82rem;
+  }
+
+  .logo-wrapper span{
+    font-size:.58rem;
+  }
+
+}

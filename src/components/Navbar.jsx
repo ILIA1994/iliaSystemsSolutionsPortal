@@ -1,22 +1,105 @@
-export default function Navbar() {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
-      <div className="container">
-        <a className="navbar-brand fw-bold fs-3" href="#">
-          Ilia Systems Solutions
-        </a>
+import {
+  Navbar,
+  Nav,
+  Container
+} from "react-bootstrap";
 
-        <div className="d-none d-lg-flex gap-4 align-items-center">
-          <a href="#" className="nav-link-custom">Inicio</a>
-          <a href="#" className="nav-link-custom">Servicios</a>
-          <a href="#" className="nav-link-custom">Tecnologías</a>
-          <a href="#" className="nav-link-custom">Proyectos</a>
+import "../styles/navbar.css";
 
-          <button className="btn btn-primary px-4 rounded-pill">
-            Agenda una reunión
-          </button>
-        </div>
-      </div>
-    </nav>
+export default function NavbarComponent(){
+
+  return(
+
+    <Navbar
+      expand="lg"
+      className="custom-navbar"
+    >
+
+      <Container
+        fluid
+        className="container-custom"
+      >
+
+        {/* =========================
+            LOGO
+        ========================= */}
+
+        <Navbar.Brand
+          className="navbar-brand-custom"
+        >
+
+          <div className="logo-wrapper">
+
+            <div className="logo-circle"></div>
+
+            <div className="logo-text">
+
+              <h3>
+                Ilia Systems Solutions
+              </h3>
+
+              <span>
+                Consultoría • IA • Automatización
+              </span>
+
+            </div>
+
+          </div>
+
+        </Navbar.Brand>
+
+        {/* =========================
+            TOGGLE
+        ========================= */}
+
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="custom-toggle"
+        />
+
+        {/* =========================
+            MENU
+        ========================= */}
+
+        <Navbar.Collapse
+          id="basic-navbar-nav"
+        >
+
+          <Nav className="ms-auto align-items-lg-center nav-container">
+
+            <Nav.Link href="#">
+              Inicio
+            </Nav.Link>
+
+            <Nav.Link href="#">
+              Servicios
+            </Nav.Link>
+
+            <Nav.Link href="#">
+              Soluciones
+            </Nav.Link>
+
+            <Nav.Link href="#">
+              Nosotros
+            </Nav.Link>
+
+            <Nav.Link href="#">
+              Recursos
+            </Nav.Link>
+
+            <Nav.Link href="#">
+              Contacto
+            </Nav.Link>
+
+   
+
+          </Nav>
+
+        </Navbar.Collapse>
+
+      </Container>
+
+    </Navbar>
+
   )
 }

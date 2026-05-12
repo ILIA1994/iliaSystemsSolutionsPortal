@@ -1,50 +1,51 @@
-import { Globe, Smartphone, Monitor, ShieldCheck } from 'lucide-react'
+
+import "../styles/services.css";
 
 const services = [
   {
-    icon: <Globe size={42} />,
-    title: 'Desarrollo Web'
+    title: "Consultoría de Procesos",
+    text: "Analizamos y optimizamos procesos empresariales."
   },
   {
-    icon: <Smartphone size={42} />,
-    title: 'Apps Móviles'
+    title: "Automatización de Procesos",
+    text: "Reducimos tareas repetitivas y manuales."
   },
   {
-    icon: <Monitor size={42} />,
-    title: 'Software Escritorio'
+    title: "Integraciones y Sistemas",
+    text: "Conectamos plataformas y servicios."
   },
   {
-    icon: <ShieldCheck size={42} />,
-    title: 'Consultoría IT'
+    title: "Mejora Continua",
+    text: "Aumentamos la eficiencia operativa."
   }
 ]
 
-export default function Services() {
-  return (
+export default function Services(){
+  return(
     <section className="services-section">
-      <div className="container">
-        <div className="section-title text-center">
-          <h2>Servicios Premium</h2>
-          <p>Diseñados para empresas modernas.</p>
-        </div>
+      <div className="container-custom">
 
-        <div className="row g-4">
-          {services.map((service, index) => (
-            <div className="col-lg-3 col-md-6" key={index}>
-              <div className="service-card">
-                <div className="service-icon">
-                  {service.icon}
-                </div>
+        <span className="section-mini">
+          NUESTROS SERVICIOS
+        </span>
 
-                <h4>{service.title}</h4>
+        <h2 className="section-title dark">
+          Soluciones diseñadas para optimizar cada área de tu negocio
+        </h2>
 
-                <p>
-                  Soluciones escalables y modernas con experiencias visuales premium.
-                </p>
-              </div>
+        <div className="services-grid">
+
+          {services.map((service,index)=>(
+            <div className="service-card" key={index}>
+              <div className="service-icon"></div>
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
+              <span>Más información →</span>
             </div>
           ))}
+
         </div>
+
       </div>
     </section>
   )

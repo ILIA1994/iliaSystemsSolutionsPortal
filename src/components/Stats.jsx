@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import "../styles/footer.css";
+import "../styles/stats.css";
 
-export default function Footer(){
+export default function Stats(){
 
   const canvasRef = useRef(null);
 
@@ -22,8 +22,8 @@ export default function Footer(){
 
     const resizeCanvas = () => {
 
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+      width = canvas.width = canvas.offsetWidth;
+      height = canvas.height = canvas.offsetHeight;
 
     };
 
@@ -47,10 +47,10 @@ export default function Footer(){
         this.x = Math.random() * width;
         this.y = Math.random() * height;
 
-        this.vx = (Math.random() - 0.5) * 0.22;
-        this.vy = (Math.random() - 0.5) * 0.22;
+this.vx = (Math.random() - 0.5) * 0.6;
+this.vy = (Math.random() - 0.5) * 0.6;
 
-        this.size = Math.random() * 1.4 + 0.4;
+        this.size = Math.random() * 1.5 + 0.5;
 
       }
 
@@ -74,8 +74,8 @@ export default function Footer(){
 
         if(distance < mouse.radius){
 
-          this.x -= dx / 70;
-          this.y -= dy / 70;
+          this.x -= dx / 60;
+          this.y -= dy / 60;
 
         }
 
@@ -104,7 +104,7 @@ export default function Footer(){
 
       particles = [];
 
-      for(let i = 0; i < 35; i++){
+      for(let i = 0; i < 55; i++){
 
         particles.push(new Particle());
 
@@ -125,14 +125,14 @@ export default function Footer(){
 
           const distance = dx * dx + dy * dy;
 
-          if(distance < 9000){
+          if(distance < 10000){
 
             ctx.beginPath();
 
             ctx.strokeStyle =
-              "rgba(255,255,255,0.12)";
+              "rgba(255,255,255,0.16)";
 
-            ctx.lineWidth = 0.8;
+            ctx.lineWidth = 1.3;
 
             ctx.moveTo(
               particles[a].x,
@@ -183,145 +183,63 @@ export default function Footer(){
 
   return(
 
-    <footer className="footer">
+    <section className="stats-section">
 
       {/* =====================================
-          NETWORK
+          NEURAL NETWORK
       ===================================== */}
 
       <canvas
         ref={canvasRef}
-        className="footer-network"
+        className="stats-network"
       />
-
-      {/* =====================================
-          BLURS
-      ===================================== */}
-
-      <div className="footer-blur footer-blur-1"></div>
-      <div className="footer-blur footer-blur-2"></div>
 
       {/* =====================================
           CONTENT
       ===================================== */}
 
-      <div className="container-custom footer-container">
+      <div className="container-custom">
 
-        <div className="footer-grid">
+        <span className="section-mini">
+          IMPACTO QUE GENERAMOS
+        </span>
 
-          {/* LEFT */}
+        <h2 className="section-title">
+          Resultados medibles que impulsan tu crecimiento
+        </h2>
 
-          <div className="footer-brand">
+        <div className="stats-grid">
 
-            <h3>
-              Ilia Systems Solutions
-            </h3>
-
-            <p>
-              Consultoría, automatizaciones y soluciones
-              tecnológicas enfocadas en optimizar procesos,
-              reducir costos y transformar operaciones.
-            </p>
-
-            <div className="footer-socials">
-
-              <div className="social-circle">
-                in
-              </div>
-
-              <div className="social-circle">
-                f
-              </div>
-
-              <div className="social-circle">
-                ig
-              </div>
-
-            </div>
-
+          <div className="stat-card">
+            <h3>+70%</h3>
+            <p>Mayor eficiencia operativa</p>
           </div>
 
-          {/* SERVICES */}
-
-          <div>
-
-            <h4>
-              Servicios
-            </h4>
-
-            <ul>
-
-              <li>
-                Consultoría empresarial
-              </li>
-
-              <li>
-                Automatización de procesos
-              </li>
-
-              <li>
-                Integraciones
-              </li>
-
-              <li>
-                Desarrollo web
-              </li>
-
-            </ul>
-
+          <div className="stat-card">
+            <h3>-60%</h3>
+            <p>Reducción de tiempo</p>
           </div>
 
-          {/* COMPANY */}
-
-          <div>
-
-            <h4>
-              Empresa
-            </h4>
-
-            <ul>
-
-              <li>
-                Nosotros
-              </li>
-
-              <li>
-                Casos de éxito
-              </li>
-
-              <li>
-                Blog
-              </li>
-
-              <li>
-                Contacto
-              </li>
-
-            </ul>
-
+          <div className="stat-card">
+            <h3>-40%</h3>
+            <p>Disminución de costos</p>
           </div>
 
-        </div>
+          <div className="stat-card">
+            <h3>+35%</h3>
+            <p>Mejora en productividad</p>
+          </div>
 
-        {/* =====================================
-            BOTTOM
-        ===================================== */}
-
-        <div className="footer-bottom">
-
-          <span>
-            © 2026 Ilia Systems Solutions
-          </span>
-
-          <span>
-            Todos los derechos reservados
-          </span>
+          <div className="stat-card">
+            <h3>100%</h3>
+            <p>Visibilidad y control</p>
+          </div>
 
         </div>
 
       </div>
 
-    </footer>
+    </section>
   )
 
 }
