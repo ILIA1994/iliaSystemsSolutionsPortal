@@ -235,8 +235,7 @@ export default function Hero(){
           </span>
 
           <h1>
-            Soluciones digitales
-            para empresas modernas
+            Transformamos ideas en soluciones digitales
           </h1>
 
           <p>
