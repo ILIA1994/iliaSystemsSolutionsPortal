@@ -168,9 +168,6 @@ export default function Nosotros() {
         {/* HEADER DE LA SECCIÓN */}
         <div className="row justify-content-center mb-4 text-center">
           <div className="col-lg-8">
-            <span className="badge-futuristic mb-3">
-              <span className="badge-dot"></span> DISTRIBUTED TOPOLOGY ENGINE // EXPANDED CORE
-            </span>
             <h2 className="display-4 fw-bold main-title">
               Nuestros Pilares <span className="text-gradient">Tecnológicos</span>
             </h2>
@@ -418,33 +415,6 @@ export default function Nosotros() {
                 );
               })}
 
-            </div>
-          </div>
-        </div>
-
-        {/* MÓDULO INFERIOR DE MONITOREO DE TELEMETRÍA */}
-        <div className="row mt-4 justify-content-center">
-          <div className="col-lg-10">
-            <div className="scifi-monitoring-deck-v2">
-              <div className="row align-items-center g-3">
-                <div className="col-md-4 text-center text-md-start border-panel-r">
-                  <span className="deck-tag">NETWORK TOPOLOGY MAP</span>
-                  <div className="deck-value text-white mt-1">
-                    {PILLARS_DATA.length} PILARES ACTIVOS // CONFIGURACIÓN ADAPTATIVA
-                  </div>
-                </div>
-                <div className="col-md-5 text-center">
-                  <div className="live-ticker-log-v2">
-                    {activeNodeData 
-                      ? `[TELEMETRY_STREAM] ➔ LINK_ESTABLISHED WITH: ${activeNodeData.title.toUpperCase()}`
-                      : "[SYS_STATUS]: RED COMPLETA DESPLEGADA. NINGÚN ELEMENTO OPACO. ACCESO LIBRE."}
-                  </div>
-                </div>
-                <div className="col-md-3 text-center text-md-end border-panel-l">
-                  <span className="deck-tag">INTEGRATED MESH BACKPLANE</span>
-                  <div className="deck-value text-gradient-green mb-0">EQUALIZED_3D</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

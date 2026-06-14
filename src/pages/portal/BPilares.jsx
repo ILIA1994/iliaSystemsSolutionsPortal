@@ -168,9 +168,6 @@ export default function Nosotros() {
         {/* HEADER DE LA SECCIÓN */}
         <div className="row justify-content-center mb-4 text-center">
           <div className="col-lg-8">
-            <span className="badge-futuristic mb-3">
-              <span className="badge-dot"></span> DISTRIBUTED TOPOLOGY ENGINE // EXPANDED CORE
-            </span>
             <h2 className="display-4 fw-bold main-title">
               Nuestros Pilares <span className="text-gradient">Tecnológicos</span>
             </h2>
