@@ -1,0 +1,410 @@
+/* ====================================
+   SCROLL PROGRESS BAR
+==================================== */
+
+.scroll-progress{
+  position:fixed;
+  top:0;
+  left:0;
+
+  width:0%;
+  height:4px;
+
+  z-index:9999;
+
+  background:linear-gradient(
+    90deg,
+    #00bfff,
+    #00ff95,
+    #38bdf8
+  );
+
+  box-shadow:
+    0 0 15px rgba(0,191,255,.8),
+    0 0 25px rgba(0,255,149,.5);
+
+  transition:width .15s linear;
+}
+
+/* ====================================
+   NAVBAR
+==================================== */
+
+.iss-navbar{
+  position:fixed;
+
+  top:15px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:85%;
+
+  z-index:999;
+
+  border-radius:50px;
+
+  /* MADERA PREMIUM */
+
+background:
+linear-gradient(
+  135deg,
+  #0f172a 0%,
+  #1e293b 35%,
+  #334155 70%,
+  #475569 100%
+);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+  0 20px 40px rgba(0,0,0,.25);
+
+  transition:
+  background .4s ease,
+  box-shadow .4s ease,
+  transform .4s ease;
+}
+
+/* ====================================
+   NAVBAR SCROLL
+==================================== */
+
+.iss-navbar.scrolled{
+
+  background:
+  linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #172554 40%,
+    #1e3a8a 70%,
+    #2563eb 100%
+  );
+
+  backdrop-filter:blur(10px);
+
+  box-shadow:
+  0 20px 50px rgba(0,0,0,.35);
+}
+
+/* ====================================
+   CONTAINER
+==================================== */
+
+.iss-container{
+
+  padding-left:18px;
+  padding-right:18px;
+}
+
+/* ====================================
+   LOGO
+==================================== */
+
+.iss-brand{
+
+  display:flex !important;
+
+  align-items:center;
+
+  gap:12px;
+}
+
+.iss-logo{
+
+  width:50px;
+  height:50px;
+
+  background-image:url("/logo.png");
+
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+.iss-brand-text h3{
+
+  color:white;
+
+  margin:0;
+
+  font-size:.95rem;
+
+  font-weight:700;
+}
+
+.iss-brand-text span{
+
+  color:#d1d5db;
+
+  font-size:.68rem;
+}
+
+/* ====================================
+   MENU
+==================================== */
+
+.iss-nav{
+
+  gap:25px;
+
+  align-items:center;
+}
+
+.iss-link{
+
+  position:relative !important;
+
+  color:#e5e7eb !important;
+
+  font-weight:600;
+
+  font-size:.92rem;
+
+  transition:.3s;
+}
+
+.iss-link:hover{
+
+  color:white !important;
+}
+
+/* ====================================
+   ACTIVE
+==================================== */
+
+.iss-link.active{
+
+  color:white !important;
+}
+
+.iss-link.active::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:50%;
+  bottom:-8px;
+
+  transform:translateX(-50%);
+
+  width:24px;
+  height:2px;
+
+  border-radius:999px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #00bfff,
+    #00ff95
+  );
+}
+
+/* ====================================
+   SERVICES
+==================================== */
+
+.iss-services{
+
+  position:relative;
+}
+
+.iss-services-btn{
+
+  background:none;
+
+  border:none;
+
+  color:#e5e7eb;
+
+  font-weight:600;
+
+  font-size:.92rem;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  cursor:pointer;
+
+  transition:.3s;
+}
+
+.iss-services-btn:hover{
+
+  color:white;
+}
+
+.rotate{
+
+  transform:rotate(180deg);
+}
+
+/* ====================================
+   DROPDOWN
+==================================== */
+
+.iss-dropdown{
+
+  position:absolute;
+
+  top:48px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  width:320px;
+
+  opacity:0;
+
+  visibility:hidden;
+
+  pointer-events:none;
+
+  transition:.3s;
+
+  padding:12px;
+
+  border-radius:18px;
+
+  background:
+  rgba(15,23,42,.98);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  box-shadow:
+  0 25px 50px rgba(0,0,0,.35);
+}
+
+.iss-dropdown.open{
+
+  opacity:1;
+
+  visibility:visible;
+
+  pointer-events:auto;
+}
+
+.iss-service-item{
+
+  display:block;
+
+  text-decoration:none;
+
+  color:#cbd5e1;
+
+  padding:14px;
+
+  border-radius:12px;
+
+  transition:.3s;
+}
+
+.iss-service-item:hover{
+
+  color:white;
+
+  background:
+  rgba(0,191,255,.12);
+}
+
+/* ====================================
+   TOGGLE
+==================================== */
+
+.iss-toggle{
+
+  border:
+  1px solid rgba(255,255,255,.15)
+  !important;
+}
+
+/* ====================================
+   MOBILE
+==================================== */
+
+@media(max-width:991px){
+
+  .iss-navbar{
+
+    width:95%;
+  }
+
+  .iss-nav{
+
+    margin-top:15px;
+
+    gap:10px;
+
+    align-items:stretch;
+  }
+
+  .iss-link{
+
+    padding:12px 0 !important;
+  }
+
+  .iss-services{
+
+    width:100%;
+  }
+
+  .iss-services-btn{
+
+    width:100%;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+  }
+
+  .iss-dropdown{
+
+    position:relative;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    transform:none;
+
+    margin-top:10px;
+
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+
+    display:none;
+  }
+
+  .iss-dropdown.open{
+
+    display:block;
+  }
+
+  .iss-logo{
+
+    width:42px;
+    height:42px;
+  }
+
+  .iss-brand-text h3{
+
+    font-size:.85rem;
+  }
+
+  .iss-brand-text span{
+
+    font-size:.6rem;
+  }
+}

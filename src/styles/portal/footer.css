@@ -1,0 +1,514 @@
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer{
+  position:relative;
+  overflow:hidden;
+
+  background:
+  linear-gradient(
+    135deg,
+    #020617 0%,
+    #0f172a 50%,
+    #020617 100%
+  );
+
+  padding:110px 0 40px;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.footer .container-custom{
+  position:relative;
+  z-index:10;
+
+  width:100%;
+  max-width:1400px;
+
+  margin:0 auto;
+
+  padding-left:60px;
+  padding-right:60px;
+}
+
+/* =========================================
+   NETWORK EFFECT
+========================================= */
+
+.network-wrapper{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  z-index:1;
+}
+
+.neural-network{
+  position:absolute;
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  pointer-events:none;
+}
+
+/* =========================================
+   GLOWS
+========================================= */
+
+.footer-glow{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(180px);
+  z-index:1;
+}
+
+.footer-glow-1{
+
+  width:450px;
+  height:450px;
+
+  top:-200px;
+  left:-150px;
+
+  background:#2563eb;
+
+  opacity:.10;
+}
+
+.footer-glow-2{
+
+  width:380px;
+  height:380px;
+
+  right:-120px;
+  bottom:-120px;
+
+  background:#06b6d4;
+
+  opacity:.08;
+}
+
+/* =========================================
+   TOP
+========================================= */
+
+.footer-top{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+
+  gap:100px;
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-brand{
+  flex:1;
+  max-width:550px;
+}
+
+.footer-brand h2{
+  font-family: "Shadows Into Light", cursive;
+  font-weight: 400;
+  color:#ffffff;
+
+  font-size:2.6rem;
+  font-weight:800;
+
+  margin-bottom:20px;
+
+  line-height:1.1;
+}
+
+.footer-brand p{
+
+  color:#94a3b8;
+
+  font-size:1rem;
+
+  line-height:1.9;
+}
+
+/* =========================================
+   SOCIALS
+========================================= */
+
+.footer-socials{
+
+  display:flex;
+  gap:15px;
+
+  margin-top:35px;
+}
+
+.social-circle{
+
+  width:50px;
+  height:50px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:
+  rgba(255,255,255,.04);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(10px);
+
+  color:white;
+  font-weight:700;
+
+  transition:.35s ease;
+}
+
+.social-circle:hover{
+
+  transform:
+  translateY(-5px);
+
+  border:
+  1px solid rgba(37,99,235,.4);
+
+  box-shadow:
+  0 15px 35px rgba(37,99,235,.25);
+}
+
+/* =========================================
+   LINKS AREA
+========================================= */
+
+.footer-links{
+
+  flex:1.3;
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(3,1fr);
+
+  gap:70px;
+}
+
+/* =========================================
+   TITLES
+========================================= */
+
+.footer h4{
+
+  color:white;
+
+  font-size:1rem;
+  font-weight:700;
+
+  margin-bottom:24px;
+
+  position:relative;
+}
+
+.footer h4::after{
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-10px;
+
+  width:40px;
+  height:2px;
+
+  background:
+  linear-gradient(
+    90deg,
+    #2563eb,
+    #06b6d4
+  );
+}
+
+/* =========================================
+   LISTS
+========================================= */
+
+.footer ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+.footer li{
+
+  color:#94a3b8;
+
+  margin-bottom:16px;
+
+  cursor:pointer;
+
+  transition:.3s ease;
+}
+
+.footer li:hover{
+
+  color:#ffffff;
+
+  transform:
+  translateX(8px);
+}
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.footer-divider{
+
+  height:1px;
+
+  margin:70px 0 35px;
+
+  background:
+  linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.15),
+    transparent
+  );
+}
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.footer-bottom{
+
+  display:flex;
+
+  justify-content:space-between;
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:20px;
+}
+
+.footer-bottom span{
+
+  color:#64748b;
+
+  font-size:.95rem;
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media(max-width:992px){
+
+  .footer{
+    padding:90px 0 40px;
+  }
+
+  .footer .container-custom{
+    padding-left:40px;
+    padding-right:40px;
+  }
+
+  .footer-top{
+
+    flex-direction:column;
+
+    gap:60px;
+  }
+
+  .footer-links{
+
+    width:100%;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:50px;
+  }
+
+  .footer-brand{
+    max-width:100%;
+  }
+
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .footer{
+
+    padding:80px 0 30px;
+  }
+
+  .footer .container-custom{
+
+    padding-left:25px;
+    padding-right:25px;
+  }
+
+  .footer-brand h2{
+
+    font-size:2rem;
+  }
+
+  .footer-links{
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+  }
+
+  .footer-bottom{
+
+    flex-direction:column;
+
+    text-align:center;
+  }
+
+  .social-circle{
+
+    width:45px;
+    height:45px;
+  }
+
+}
+
+/* =========================================
+   EXTRA LARGE
+========================================= */
+
+@media(min-width:1600px){
+
+  .footer .container-custom{
+
+    max-width:1500px;
+  }
+
+  .footer-brand h2{
+
+    font-size:3rem;
+  }
+
+}
+
+.footer-socials{
+  display:flex;
+  gap:16px;
+  margin-top:35px;
+  
+}
+
+.social-circle{
+  width:54px;
+  height:54px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  text-decoration:none;
+
+  color:white;
+
+  font-size:1.3rem;
+
+  transition:all .35s ease;
+
+  box-shadow:
+    0 8px 25px rgba(0,0,0,.25);
+}
+
+/* =====================
+   LINKEDIN
+===================== */
+
+.linkedin{
+  background:#0A66C2;
+}
+
+.linkedin:hover{
+  transform:
+    translateY(-6px)
+    scale(1.08);
+
+  box-shadow:
+    0 15px 35px rgba(10,102,194,.45);
+}
+
+/* =====================
+   FACEBOOK
+===================== */
+
+.facebook{
+  background:#1877F2;
+}
+
+.facebook:hover{
+  transform:
+    translateY(-6px)
+    scale(1.08);
+
+  box-shadow:
+    0 15px 35px rgba(24,119,242,.45);
+}
+
+/* =====================
+   INSTAGRAM
+===================== */
+
+.instagram{
+  background:
+    linear-gradient(
+      45deg,
+      #f09433,
+      #e6683c,
+      #dc2743,
+      #cc2366,
+      #bc1888
+    );
+}
+
+.instagram:hover{
+  transform:
+    translateY(-6px)
+    scale(1.08);
+
+  box-shadow:
+    0 15px 35px rgba(220,39,67,.45);
+}
+
+/* =====================
+   YOUTUBE
+===================== */
+
+.youtube{
+  background:#FF0000;
+}
+
+.youtube:hover{
+  transform:
+    translateY(-6px)
+    scale(1.08);
+
+  box-shadow:
+    0 15px 35px rgba(255,0,0,.45);
+}

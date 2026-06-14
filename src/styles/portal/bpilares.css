@@ -1,0 +1,463 @@
+/*
+ * ==============================================================================
+ * HOJA DE ESTILOS: Nosotros.css
+ * OPTIMIZACIÓN: Eliminación de opacidades cruzadas de entorno.
+ * ESPACIADO: Arquitectura expandida hiper-limpia libre de congestión visual.
+ * ==============================================================================
+ */
+
+:root {
+  --space-dark-core: #030408;
+  --space-surface-panel: #070b14;
+  --font-scifi-premium: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --glass-border-rgba: rgba(255, 255, 255, 0.06);
+}
+
+.nosotros-section {
+  position: relative;
+  background-color: var(--space-dark-core);
+  color: #f8fafc;
+  font-family: var(--font-scifi-premium);
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.positional-container {
+  position: relative;
+  z-index: 5;
+}
+
+/* DEGRADADOS AMBIENTALES DE ALTO IMPACTO */
+.neural-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.grid-overlay {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.008) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.008) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.9;
+  transition: transform 0.6s cubic-bezier(0.15, 0.85, 0.35, 1);
+}
+
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(130px);
+  opacity: 0.12;
+  mix-blend-mode: screen;
+}
+.ambient-glow.space-cyan {
+  top: 10%;
+  left: 5%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, #00d8ff 0%, transparent 75%);
+}
+.ambient-glow.space-magenta {
+  bottom: 10%;
+  right: 5%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, #ec4899 0%, transparent 75%);
+}
+
+.constellation-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1.5px, transparent 1.5px);
+  background-size: 150px 150px;
+}
+
+/* COMPONENTES HUD TEXT */
+.badge-futuristic {
+  background: rgba(0, 216, 255, 0.05);
+  border: 1px solid rgba(0, 216, 255, 0.2);
+  color: #00d8ff;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background-color: #00d8ff;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00d8ff;
+  animation: pulse 1.5s infinite;
+}
+
+.main-title {
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #00d8ff 0%, #a855f7 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* LIENZO DE LA RED AMPLIADA CON AIRE GEOMÉTRICO (PREVIENE EL COLAPSO) */
+.neural-network-container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px; 
+  height: 820px;     
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.1, 0.8, 0.2, 1);
+}
+
+.neural-connections-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* CAPAS VECTORIALES INTERACTIVAS */
+.synapse-line-main, .synapse-line-sub {
+  transition: stroke-width 0.3s ease, filter 0.3s ease;
+}
+.synapse-line-main.active {
+  filter: drop-shadow(0 0 10px var(--node-theme-color));
+  stroke-width: 3.5px !important;
+}
+.synapse-line-sub.active {
+  filter: drop-shadow(0 0 8px var(--sub-theme-color));
+  stroke-width: 3px !important;
+}
+
+/* NÚCLEO CENTRAL INTERACTIVO (BRAIN GYRO CORE) */
+.central-brain-engine {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  z-index: 5;
+  transform-style: preserve-3d;
+}
+
+.engine-spheres-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.orbiting-shell {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+.orbiting-shell.shell-outer {
+  transform: rotateX(65deg) rotateY(15deg);
+  animation: spin 16s linear infinite;
+  border-color: #00d8ff;
+}
+.orbiting-shell.shell-inner {
+  transform: rotateX(-35deg) rotateY(55deg);
+  animation: spin 10s linear infinite reverse;
+  border-color: #ec4899;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+}
+
+.engine-core-plasma {
+  position: absolute;
+  width: 45%;
+  height: 45%;
+  top: 27.5%;
+  left: 27.5%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffffff 0%, rgba(0, 216, 255, 0.4) 60%, transparent 100%);
+  box-shadow: 0 0 30px rgba(0, 216, 255, 0.6);
+}
+
+.engine-hud-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.engine-hud-overlay .hud-tag {
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+}
+.engine-hud-overlay .hud-hz {
+  font-size: 0.5rem;
+  color: #475569;
+  display: block;
+}
+
+/* PILARES MAESTROS ESTRUCTURALES */
+.pillar-master-node {
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  z-index: 12;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.pillar-chassis {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  background: rgba(3, 5, 9, 0.95);
+  border: 1.8px solid var(--pilar-glow-color);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pillar-pulse-halo {
+  position: absolute;
+  width: 125%;
+  height: 125%;
+  border: 1px solid var(--pilar-glow-color);
+  border-radius: 18px;
+  opacity: 0.15;
+}
+
+.pillar-icon {
+  font-size: 1.75rem;
+  filter: drop-shadow(0 0 6px var(--pilar-glow-color));
+}
+
+.pillar-title-tag {
+  position: absolute;
+  top: 115%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  white-space: nowrap;
+  background: rgba(4, 6, 11, 0.9);
+  padding: 4px 8px;
+  border-radius: 3px;
+  border: 1px solid var(--glass-border-rgba);
+}
+
+/* RESALTE TRIDIMENSIONAL DE ENFOQUE (NADA SE VUELVE OPACO) */
+.pillar-master-node:hover {
+  transform: translate(-50%, -50%) translateZ(40px) scale(1.15) !important;
+  z-index: 100;
+}
+.pillar-master-node:hover .pillar-chassis {
+  box-shadow: 0 0 30px var(--pilar-glow-color);
+}
+
+/* SUB-NODOS HIJOS */
+.sub-neural-node {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  z-index: 15;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sub-node-chassis {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #03050a;
+  border: 1.5px solid var(--sub-glow-color);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sub-node-icon {
+  font-size: 1.1rem;
+  filter: drop-shadow(0 0 4px var(--sub-glow-color));
+}
+
+.sub-neural-node:hover {
+  transform: translate(-50%, -50%) translateZ(60px) scale(1.3) !important;
+  z-index: 120;
+}
+.sub-neural-node:hover .sub-node-chassis {
+  box-shadow: 0 0 20px var(--sub-glow-color);
+  background: #0c1224;
+}
+
+/* HOLOGRAMAS DE INFORMACIÓN (VIEWPORTS GLASSMORPHISM) */
+.sub-node-glass-viewport {
+  position: absolute;
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.85);
+  width: 220px;
+  background: rgba(7, 10, 19, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+  transition: all 0.25s ease;
+}
+
+.sub-node-glass-viewport::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(7, 10, 19, 0.9) transparent transparent transparent;
+}
+
+.sub-neural-node:hover .sub-node-glass-viewport {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) scale(1);
+  bottom: 150%;
+}
+
+.viewport-header-hud {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.hud-indicator-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.header-titles h6 {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  text-align: left;
+}
+.header-titles span {
+  font-size: 0.62rem;
+  color: #64748b;
+  display: block;
+  text-align: left;
+}
+
+/* CONSOLA HUD INFERIOR */
+.scifi-monitoring-deck-v2 {
+  background: rgba(7, 11, 20, 0.5);
+  border: 1px solid var(--glass-border-rgba);
+  padding: 18px;
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+}
+
+.border-panel-r { border-bottom: 1px solid rgba(255, 255, 255, 0.04); padding-bottom: 10px; }
+.border-panel-l { border-top: 1px solid rgba(255, 255, 255, 0.04); padding-top: 10px; }
+
+.deck-tag { font-size: 0.55rem; color: #475569; font-weight: 800; letter-spacing: 0.1em; display: block; }
+.deck-value { font-size: 1.15rem; font-weight: 900; }
+.text-gradient-green {
+  background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.live-ticker-log-v2 {
+  font-family: monospace;
+  font-size: 0.65rem;
+  color: #c084fc;
+}
+
+@media (min-width: 768px) {
+  .border-panel-r { border-right: 1px solid rgba(255, 255, 255, 0.05); border-bottom: none; padding-bottom: 0; }
+  .border-panel-l { border-left: 1px solid rgba(255, 255, 255, 0.05); border-top: none; padding-top: 0; }
+}
+
+/* KEYFRAMES */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 1; }
+}
+
+/* RESPONSIVE RESPONSIVO: CASCADA HUD EN SMARTPHONES */
+@media (max-width: 767.98px) {
+  .neural-network-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+  }
+  .neural-connections-svg, .central-brain-engine { display: none; }
+  .pillar-master-node, .sub-neural-node {
+    position: relative !important;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    width: 100%;
+  }
+  .pillar-chassis, .sub-node-chassis {
+    padding: 12px;
+    justify-content: flex-start;
+    gap: 12px;
+    border-radius: 6px;
+  }
+  .sub-node-glass-viewport {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
+    bottom: auto !important;
+    left: auto !important;
+    transform: none !important;
+  }
+  .sub-node-glass-viewport::after { display: none; }
+}
