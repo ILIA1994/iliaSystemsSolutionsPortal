@@ -62,9 +62,13 @@ body {
 
 .contact-page {
   min-height: 100vh;
-  position: relative;
   padding: 60px 0;
   overflow: hidden;
+
+  max-width: 1400px;
+  width: 100%;
+
+  margin: 0 auto; /* Centra horizontalmente */
 }
 
 /* =======================
@@ -162,7 +166,7 @@ body {
 }
 
 .hero-title {
-  font-size: clamp(2.8rem, 5vw, 4.8rem);
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
 
   line-height: 1.05;
 
@@ -259,7 +263,7 @@ body {
 ======================= */
 
 .contact-form {
-  padding: 30px;
+  padding: 20px;
 }
 
 .form-title {
@@ -372,7 +376,7 @@ textarea.form-control {
 .map-card {
   position: relative;
   overflow: hidden;
-  height: 365px;
+  height: 260px;
 
   margin-top: 50px;
 }
@@ -428,7 +432,7 @@ textarea.form-control {
 ======================= */
 
 .contact-info {
-  padding: 30px;
+  padding: 20px;
 }
 
 .info-title {
@@ -488,7 +492,7 @@ textarea.form-control {
 ======================= */
 
 .bottom-cta {
-  padding: 30px;
+  padding: 20px;
 }
 
 .bottom-cta h4 {
@@ -668,7 +672,7 @@ textarea.form-control {
   top: 25px;
   left: 25px;
 
-  width: 340px;
+  width: 260px;
 
   padding: 24px;
 
@@ -775,7 +779,7 @@ textarea.form-control {
 
 
 .profile-image{
-height: 365px;
+height: 260px;
 width: 100%;
   object-fit: cover;
 
@@ -800,8 +804,8 @@ width: 100%;
 
 
 .phone-frame {
-  width: 370px;
-  height: 760px;
+  width: 280px;
+  height: 580px;
 
   margin: auto;
 
@@ -892,15 +896,15 @@ width: 100%;
 
   color: #94a3b8;
 
-  font-size: 0.85rem;
+  font-size: 0.5rem;
 
   line-height: 1.5;
 
-  margin-bottom: 22px;
+  margin-bottom: 1px;
 }
 
 .mobile-input {
-  margin-bottom: 12px;
+  margin-bottom: 7px;
 }
 
 .mobile-input label {
